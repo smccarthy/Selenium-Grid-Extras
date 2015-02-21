@@ -146,13 +146,12 @@ public class GridHub {
         private String host;
         private int port;
         private long newSessionWaitTimeout = 25000;
-        //    private List<String> servlets = "com.groupon.seleniumgridextras.grid.servlets.SeleniumGridExtrasServlet,com.groupon.seleniumgridextras.grid.servlets.ProxyStatusJsonServlet";
         ArrayList<String> servlets = new ArrayList<String>() {{
             add("com.groupon.seleniumgridextras.grid.servlets.SeleniumGridExtrasServlet");
             add("com.groupon.seleniumgridextras.grid.servlets.ProxyStatusJsonServlet");
         }};
         private String prioritizer;
-        private String capabilityMatcher = "org.openqa.grid.internal.utils.DefaultCapabilityMatcher";
+        private String capabilityMatcher = "com.groupon.seleniumgridextras.grid.CustomCapabilityMatcher";
         private boolean throwOnCapabilityNotPresent = true;
         private long nodePolling = 5000;
         private long cleanUpCycle = 5000;
